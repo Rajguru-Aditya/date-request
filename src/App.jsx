@@ -131,7 +131,7 @@ function App() {
         padding: "0 20px",
         borderRadius: "10px",
         boxSizing: "border-box",
-        height: "100svh",
+        height: window.innerHeight,
       }}
     >
       {yesClicked && (
