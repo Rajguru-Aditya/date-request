@@ -119,21 +119,7 @@ function App() {
   );
 
   return (
-    <div
-      style={{
-        maxWidth: "350px",
-        position: "relative",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        alignItems: "center",
-        margin: "auto",
-        padding: "0 20px",
-        borderRadius: "10px",
-        boxSizing: "border-box",
-        height: window.innerHeight,
-      }}
-    >
+    <>
       {yesClicked && (
         <Confetti
           width={width}
@@ -146,33 +132,50 @@ function App() {
           }}
         />
       )}
-      <NoModal />
-      <YesModal />
-      <img
-        src="https://cdn.pixabay.com/photo/2022/01/27/05/00/cute-couple-6971070_1280.png"
-        alt="Couple"
+      <div
         style={{
-          width: "100%",
+          maxWidth: "350px",
+          position: "relative",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "space-between",
+          alignItems: "center",
+          margin: "auto",
+          padding: "0 20px",
           borderRadius: "10px",
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          zIndex: "-1",
+          boxSizing: "border-box",
+          height: window.innerHeight,
         }}
-      />
-      <h1 className="title">
-        Will You Go On A Date With Me, <span className="sheetal">Sheetal?</span>
-      </h1>
-      <div className="buttonContainer">
-        <button className="buttons" onClick={handleYesClick}>
-          Yes
-        </button>
-        <button className="buttons" onClick={handleNoClick}>
-          No
-        </button>
+      >
+        <NoModal />
+        <YesModal />
+        <img
+          src="https://cdn.pixabay.com/photo/2022/01/27/05/00/cute-couple-6971070_1280.png"
+          alt="Couple"
+          style={{
+            width: "100%",
+            borderRadius: "10px",
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: "-1",
+          }}
+        />
+        <h1 className="title">
+          Will You Go On A Date With Me,{" "}
+          <span className="sheetal">Sheetal?</span>
+        </h1>
+        <div className="buttonContainer">
+          <button className="buttons" onClick={handleYesClick}>
+            Yes
+          </button>
+          <button className="buttons" onClick={handleNoClick}>
+            No
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
